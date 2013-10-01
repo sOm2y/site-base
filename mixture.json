@@ -1,0 +1,22 @@
+{
+	"debug": true,
+	"domain": null,
+	"lintScripts": true,
+	"modelSource": null,
+	"preprocessorLocations": "sass/,js/",
+	"preprocessorScriptOutput": "js/",
+	"preprocessorStyleOutput": "css/",
+	"projectDescription": "DESCRIPTION",
+	"projectName": "NAME",
+	"publishedId": null,
+	"serverHostname": null,
+	"serverPort": null,
+	"simpleModePartnerServer": null,
+	"templateDefaultLayout": "layout",
+	"templateDefaultPage": "index",
+	"templateDirectory": "templates",
+	"type": "mixture",
+	"useCompass": true,
+	"remoteDebugPort" : "8005",
+	"followLeader": false
+}
