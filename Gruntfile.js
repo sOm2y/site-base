@@ -28,6 +28,7 @@ module.exports = function(grunt) {
 					boring: true,
 					//clean: true,
 					environment: 'production',
+					force: true,
 					noLineComments: true,
 					outputStyle: 'compressed'
 				}
