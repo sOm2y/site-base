@@ -3,9 +3,7 @@
 	"domain": null,
 	"lintScripts": true,
 	"modelSource": null,
-	"preprocessorLocations": "sass/,js/",
-	"preprocessorScriptOutput": "js/",
-	"preprocessorStyleOutput": "css/",
+	"preprocessorLocations": null,
 	"projectDescription": "DESCRIPTION",
 	"projectName": "NAME",
 	"publishedId": null,
@@ -16,7 +14,7 @@
 	"templateDefaultPage": "index",
 	"templateDirectory": "templates",
 	"type": "mixture",
-	"useCompass": true,
-	"remoteDebugPort" : "8005",
-	"followLeader": false
+	"useCompass": false,
+	"followLeader": false,
+	"optimiseImages": false
 }
