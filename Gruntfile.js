@@ -19,16 +19,13 @@ module.exports = function(grunt) {
 			},
 			dev: {
 				options: {
-					//debugInfo: true,
 					trace: true
 				}
 			},
 			prod: {
 				options: {
 					boring: true,
-					//clean: true,
 					environment: 'production',
-					force: true,
 					noLineComments: true,
 					outputStyle: 'compressed'
 				}
@@ -83,6 +80,15 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
+		todos: {
+			console: {
+				src: ['**/*.{html,php}', '!node_modules/**/*'],
+				options: {
+					verbose: false
+				}
+			},
+			
+		},
 		uglify: {
 			dev: {
 				files: {
@@ -118,7 +124,7 @@ module.exports = function(grunt) {
 			options: {
 				dateFormat: function(time) {
 					grunt.log.writeln(String('Completed in ' + time.toFixed(3) + 's on ' + (new Date()).toString()).cyan);
-					grunt.log.write('Waiting for more changes...');
+					grunt.log.write('Waiting for more awesomeness...');
 				},
 			},
 			js: {
@@ -143,6 +149,6 @@ module.exports = function(grunt) {
 
 	// Default tasks
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['uglify:prod', 'compass:prod', 'notify:build']);
+	grunt.registerTask('build', ['uglify:prod', 'compass:prod', 'notify:build', 'todos:console']);
 
 };
