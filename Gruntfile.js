@@ -8,29 +8,6 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		jsFiles: ['js/**/*.js', '!js/*.min.js', '!js/vendor/*', '!js/source-map.js'],
-		compass: {
-			options: {
-				cssDir: 'css',
-				fontsDir: 'font',
-				imagesDir: 'img',
-				raw: 'require \'sass-globbing\'\n',
-				relativeAssets: true,
-				sassDir: 'sass'
-			},
-			dev: {
-				options: {
-					trace: true
-				}
-			},
-			prod: {
-				options: {
-					boring: true,
-					environment: 'production',
-					noLineComments: true,
-					outputStyle: 'compressed'
-				}
-			}
-		},
 		jshint: {
 			files: ['js/**/*.js', '!js/**/*.min.js', '!js/plugin/external/*.js'],
 			options: {
@@ -62,6 +39,32 @@ module.exports = function(grunt) {
 				options: {
 					title: "Summer of Dev Bot",
 					message: 'Build a success!'
+				}
+			}
+		},
+		sass: {
+			options: {
+				loadPath: require('node-bourbon').includePaths,
+				quiet: true
+			},
+			dev: {
+				files: {
+					'css/site.css': 'sass/site.scss'
+				},
+				options: {
+					debugInfo: true,
+					lineNumbers: true,
+					sourcemap: true,
+					trace: true
+				},
+			},
+			prod: {
+				files: {
+					'css/site.css': 'sass/site.scss'
+				},
+				options: {
+					banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+					style: 'compressed'
 				}
 			}
 		},
@@ -137,7 +140,7 @@ module.exports = function(grunt) {
 			},
 			css: {
 				files: ['sass/**/*.scss'],
-				tasks: ['compass:dev']
+				tasks: ['sass:dev']
 			},
 			img: {
 				files: ['img/src/*'],
@@ -149,6 +152,6 @@ module.exports = function(grunt) {
 
 	// Default tasks
 	grunt.registerTask('default', ['watch']);
-	grunt.registerTask('build', ['uglify:prod', 'compass:prod', 'notify:build', 'todos:console']);
+	grunt.registerTask('build', ['uglify:prod', 'sass:prod', 'notify:build', 'todos:console']);
 
 };
