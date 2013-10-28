@@ -14,7 +14,6 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="apple-mobile-web-app-title" content="<?= $site_app_name ?>">
-		<meta name="apple-mobile-web-app-capable" content="yes">
 		<!-- TODO: Description/Keyword Meta tags -->
 		<title><?= $site_name ?> | <?= $page_name ?></title>
 		<link rel="apple-touch-startup-image" media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="/apple-touch-startup-image-640x960.png">
