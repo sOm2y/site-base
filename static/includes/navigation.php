@@ -1,3 +1,11 @@
+<?php
+	$nav = array(
+		'about' => 'About',
+		'contact' => 'Contact'
+	);
+?>
 <nav class="nav" role="navigation">
-	<a class="nav-item<?php if($page_url == "index") echo ' current' ?>" href="/">Home</a>
+	<?php foreach($nav as $url => $name) { ?>
+		<a class="nav-item<?php if($page_url == $url) echo ' current' ?>" href="<?= $site_base . $url ?>/"><?= $name ?></a>
+	<?php } ?>
 </nav>
