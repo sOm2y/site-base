@@ -135,12 +135,15 @@ module.exports = function(grunt) {
 				tasks: ['jshint', 'uglify:dev']
 			},
 			livereload: {
-				options: { livereload: true },
-				files: ['js/*.min.js', 'css/*.css', 'img/**/*', '!img/src/*', '**/*.{html,php}'],
+				files: ['css/*.css', 'js/*.min.js', 'img/**/*', '!img/src/*', '**/*.{html,php}'],
+				options: { livereload: true }
 			},
-			css: {
+			sass: {
 				files: ['sass/**/*.scss'],
 				tasks: ['sass:dev']
+			},
+			css: {
+				files: ['*.css']
 			},
 			img: {
 				files: ['img/src/*'],
