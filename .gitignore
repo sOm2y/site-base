@@ -1,3 +1,6 @@
 .DS_Store
 *.sass-cache
 node_modules
+
+/css/site.css.map
+/js/site.min.map
