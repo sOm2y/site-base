@@ -17,7 +17,7 @@
 		<title><?= $site_name ?> | <?= $page_name ?></title>
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="stylesheet" media="all" href="/css/site.css">
-		<script src="/js/vendor/modernizr.2.7.0.min.js"></script>
+		<script src="/js/vendor/modernizr.2.7.1.min.js"></script>
 		<!-- TODO: Add Google Analytics tracking code -->
 	</head>
 	<body>
