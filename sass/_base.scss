@@ -278,3 +278,8 @@ audio:not([controls]) {
 template {
 	display: none;
 }
+
+// Fix IE10 Snap mode responsive view
+@-ms-viewport {
+	width: device-width;
+}
