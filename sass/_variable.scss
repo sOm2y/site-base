@@ -7,7 +7,18 @@ $img: '../img';
 $font: '../font';
 
 
-// Colors
+// Color Palette
+$palettes: (
+	black: (
+		x-dark:		#333,
+		dark:		#444,
+		mid-dark:	#555,
+		base:		#666,
+		mid-light:	#777,
+		light:		#888,
+		x-light:	#999
+	)
+);
 
 
 // Typography
